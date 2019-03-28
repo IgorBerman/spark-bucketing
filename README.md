@@ -164,7 +164,7 @@ sparkSession.sql(
 
 # Results
 So did this help our cause? Yes. The job now finishes x8 times faster than before and cluster stability is restored.
-![Green box over optimized plan](./before.png)
+![Green box over optimized plan](./before_after-1-1024x725.png)
 
 
 As you can see in the green boxed Spark Sql execution plan, the right branch is missing an Exchange (i.e. shuffle). When trying to optimize a spark job, use sql tab to understand if your changes helped or not(the picture attached are on test data and doesn't represent production workloads, however the implementation of removing "base" shuffles has not changed).
